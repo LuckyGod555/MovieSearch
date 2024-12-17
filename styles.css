@@ -1,0 +1,130 @@
+/* Основные стили для страницы */
+body {
+  color: rgb(231, 214, 214);
+  font-family: Arial, sans-serif;
+  background-color: hwb(90 16% 82%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column;
+}
+
+/* Стили для формы */
+#searchForm {
+  color: rgb(231, 214, 214);
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Стили для поля ввода */
+#movieTitle {
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+}
+
+/* Стили для кнопки */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Стили для области с информацией о фильме */
+#movieInfo {
+  color: rgb(231, 214, 214);
+  margin-top: 20px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Когда информация о фильме загружается, она плавно появляется */
+#movieInfo.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Стили для изображения */
+#movieInfo img {
+  max-width: 300px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+/* Плавное исчезновение заголовка */
+#IntroText {
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+#IntroText.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Плавное исчезновение выбора языка */
+#SearchLanguage {
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+#SearchLanguage.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Для ошибок */
+#error-message {
+  color: red;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+}/* Плавное исчезновение меток и других элементов */
+#movieTitleLabel, #languageLabel {
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#movieTitleLabel.hidden, #languageLabel.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#IntroText {
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+#IntroText.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#SearchLanguage {
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+#SearchLanguage.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Для других элементов скрытых после поиска */
+#movieTitle, #language, button {
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+#movieTitle.hidden, #language.hidden, button.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+

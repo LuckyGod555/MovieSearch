@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Ваши стили -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <div id="IntroText">
+        <h1>Search for a Movie</h1>
+    </div>
+
+    <div id="formContainer">
+        <form id="searchForm">
+            <label id="movieTitleLabel" for="movieTitle">Movie Title:</label>
+            <input type="text" id="movieTitle" placeholder="Enter movie title">
+            <label id="languageLabel" for="language">Language:</label>
+            <select id="language">
+                <option value="en">English</option>
+                <option value="ru">Russian</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+            </select>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <div id="movieInfo" class="animate__animated">
+        <!-- Информация о фильме будет отображаться здесь -->
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
